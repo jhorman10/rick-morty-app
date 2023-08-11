@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <a [routerLink]="['/']">
+    <img
+      class="rick-morty-loco"
+      src="../../../assets/favicon_io/icons8-morty-smith-color-hand-drawn-120.png"
+      alt="rick & morty logo"
+    />
+  </a>
+  <ul class="group-list">
+    <li *ngFor="let option of options" class="group-list-item">
+      <a
+        class="group-list-item-a"
+        [routerLink]="['/' + option.url]"
+        routerLinkActive="active"
+      >
+        {{ option.name }}
+      </a>
+    </li>
+  </ul>
+</nav>
