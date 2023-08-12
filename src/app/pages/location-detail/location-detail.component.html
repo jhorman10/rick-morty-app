@@ -4,7 +4,13 @@
   <p class="location-info">Dimension: {{ location?.dimension }}</p>
   <p class="location-info">Residents:</p>
   <ul class="resident-list">
-    <li *ngFor="let resident of location?.residents">{{ resident }}</li>
+    <li *ngFor="let resident of location?.residents">
+      <a>
+        {{ resident }}
+      </a>
+    </li>
   </ul>
-  <button class="back-button" (click)="navigateToList()">Back to Locations</button>
+  <button class="back-button" (click)="navigateToList()">
+    Back to Locations
+  </button>
 </div>
