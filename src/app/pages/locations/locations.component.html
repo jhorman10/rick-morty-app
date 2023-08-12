@@ -1,8 +1,14 @@
-<h2 class="locations-title">Lista de Lugares</h2>
 <div class="locations-container">
-  <div class="location-card" *ngFor="let location of locations" (click)="navigateToDetail(location.id)">
-    <p class="location-name">{{ location.name }}</p>
-    <p class="location-type">{{ location.type }}</p>
-    <p class="location-dimension">{{ location.dimension }}</p>
+  <h2 class="locations-title">Lista de Lugares</h2>
+  <div class="location">
+    <div
+      class="location-card"
+      *ngFor="let location of locations"
+      (click)="navigateToDetail(location.id)"
+    >
+      <p class="location-name">{{ location.name }}</p>
+      <p class="location-type">{{ location.type }}</p>
+      <p class="location-dimension">{{ location.dimension }}</p>
+    </div>
   </div>
 </div>

@@ -1,3 +1,13 @@
+.characters-container
+  box-sizing: border-box
+  display: grid
+  place-content: center
+  align-content: center
+  justify-content: center
+  align-items: center
+  justify-items: center
+  position: relative
+
 .character-list
   box-sizing: border-box
   width: 100vw
@@ -9,6 +19,24 @@
   max-height: calc( 100vh - 60px - 7vh )
   overflow-y: auto
   overflow-x: hidden
+
+.search-input
+  position: absolute
+  z-index: 1
+  top: -25px
+  left: calc( 25vw )
+  padding: 8px 12px
+  border: 1px solid #ccc
+  border-radius: 5px
+  font-size: 16px
+  width: 50%
+  box-sizing: border-box
+  transition: border-color 0.3s, box-shadow 0.3s
+
+  &:focus
+    outline: none
+    border-color: #538cec
+    box-shadow: 0 0 5px rgba(83, 140, 236, 0.7)
 
 .character
   position: relative

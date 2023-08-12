@@ -10,6 +10,7 @@ import { CharactersService } from './characters.service';
 })
 export class CharactersComponent implements OnInit {
   characters: Result[] = [];
+  copyCharacters: Result[] = [];
 
   constructor(
     private charactersService: CharactersService,
@@ -19,10 +20,18 @@ export class CharactersComponent implements OnInit {
   ngOnInit() {
     this.charactersService.getAllCharacters().subscribe((response) => {
       this.characters = response.results;
+      this.copyCharacters = response.results;
     });
   }
 
   navigateToDetail(id: number): void {
     this.router.navigate(['/character', id]);
+  }
+
+  filterCharacters(event: any): void {
+    const searchTerm = event.target.value;
+    this.characters = this.copyCharacters.filter(character =>
+      character.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   }
 }
