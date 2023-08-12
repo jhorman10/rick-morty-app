@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Result } from 'src/app/interfaces/episodes.interface';
 import { EpisodesServiceService } from './episodes.service';
 
@@ -10,11 +11,18 @@ import { EpisodesServiceService } from './episodes.service';
 export class EpisodesComponent implements OnInit {
   episodes: Result[] = [];
 
-  constructor(private episodesServiceService: EpisodesServiceService) {}
+  constructor(
+    private episodesServiceService: EpisodesServiceService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.episodesServiceService.getAllEpisodes().subscribe((response) => {
       this.episodes = response.results;
     });
+  }
+
+  navigateToDetail(id: number): void {
+    this.router.navigate(['/episode', id]);
   }
 }

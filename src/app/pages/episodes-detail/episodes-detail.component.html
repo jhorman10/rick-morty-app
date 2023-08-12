@@ -1,1 +1,14 @@
-<p>episodes-detail works!</p>
+<div class="episode-details-container">
+  <h2 class="episode-title">{{ episode?.name }}</h2>
+  <p class="episode-info">Air Date: {{ episode?.air_date }}</p>
+  <p class="episode-info">Episodio: {{ episode?.episode }}</p>
+  <p class="episode-info">Personajes:</p>
+  <ul class="character-list">
+    <li *ngFor="let character of episode?.characters">
+      <a >
+        {{ character }}
+      </a>
+    </li>
+  </ul>
+  <button class="back-button" (click)="navigateToList()">Volver a lista de Episodios</button>
+</div>
