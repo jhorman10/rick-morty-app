@@ -1,1 +1,10 @@
-<p>location-detail works!</p>
+<div class="location-details-container">
+  <h2 class="location-title">{{ location?.name }}</h2>
+  <p class="location-info">Type: {{ location?.type }}</p>
+  <p class="location-info">Dimension: {{ location?.dimension }}</p>
+  <p class="location-info">Residents:</p>
+  <ul class="resident-list">
+    <li *ngFor="let resident of location?.residents">{{ resident }}</li>
+  </ul>
+  <button class="back-button" (click)="navigateToList()">Back to Locations</button>
+</div>

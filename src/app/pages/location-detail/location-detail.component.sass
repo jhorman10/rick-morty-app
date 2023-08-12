@@ -1,0 +1,45 @@
+.location-details-container
+  display: grid
+  place-content: center
+  max-width: 800px
+  margin: 0 auto
+  padding: 20px
+  background-color: #fff
+  border: 1px solid #ddd
+  border-radius: 5px
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)
+  transition: transform 0.3s, box-shadow 0.3s
+
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+
+  .location-title
+    font-size: 24px
+    margin-bottom: 15px
+
+  .location-info
+    font-size: 16px
+    margin-bottom: 5px
+
+  .resident-list
+    list-style: disc
+    margin-left: 20px
+    font-size: 14px
+    color: #333
+
+    li
+      margin-bottom: 5px
+
+  .back-button
+    margin-top: 20px
+    padding: 10px 20px
+    background-color: rgb(245, 245, 245)
+    color: #000
+    border: none
+    border-radius: 5px
+    cursor: pointer
+    transition: background-color 0.3s
+
+    &:hover
+      background-color: rgb(198, 198, 198)
