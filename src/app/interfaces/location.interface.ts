@@ -1,4 +1,4 @@
-export interface Characters {
+export interface ILocation {
   info:    Info;
   results: Result[];
 }

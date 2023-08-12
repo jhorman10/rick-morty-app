@@ -1,4 +1,4 @@
-export interface Characters {
+export interface IEpisodes {
   info:    Info;
   results: Result[];
 }
