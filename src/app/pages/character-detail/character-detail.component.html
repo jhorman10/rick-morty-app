@@ -1,0 +1,17 @@
+<div class="character-detail">
+  <img
+    [src]="character?.image"
+    alt="{{ character?.name }}"
+    class="character-image"
+  />
+  <div class="character-details">
+    <h2>{{ character?.name }}</h2>
+    <p>
+      Status:
+      <span class="status" [ngClass]="character?.status?.toLowerCase()">{{
+        character?.status
+      }}</span>
+    </p>
+  </div>
+  <button (click)="navigateToList()">Volver a la lista de personajes</button>
+</div>

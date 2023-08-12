@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ICharacters } from 'src/app/interfaces/character.interface';
+import { Router } from '@angular/router';
+import { Result } from 'src/app/interfaces/character.interface';
 import { CharactersService } from './characters.service';
 
 @Component({
@@ -8,14 +9,20 @@ import { CharactersService } from './characters.service';
   styleUrls: ['./characters.component.sass'],
 })
 export class CharactersComponent implements OnInit {
-  characters: ICharacters[] = [];
+  characters: Result[] = [];
 
-  constructor(private charactersService: CharactersService) {}
+  constructor(
+    private charactersService: CharactersService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    this.charactersService
-      .getAllCharacters()
-      .subscribe((characters) => (this.characters = characters));
+    this.charactersService.getAllCharacters().subscribe((response) => {
+      this.characters = response.results;
+    });
+  }
 
+  navigateToDetail(id: number): void {
+    this.router.navigate(['/character', id]);
   }
 }

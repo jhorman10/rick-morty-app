@@ -1,5 +1,9 @@
-<section class="characters-section">
-
-  <!-- <div *ngFor="let result of results" class="card-character">results</div> -->
-
-</section>
+<div class="character-list">
+  <div *ngFor="let character of characters" class="character" (click)="navigateToDetail(character.id)">
+    <img [src]="character.image" alt="{{ character.name }}" class="character-image">
+    <div class="character-details">
+      <h3>{{ character.name }}</h3>
+      <p>Status: <span class="status" [ngClass]="character.status.toLowerCase()">{{ character.status }}</span></p>
+    </div>
+  </div>
+</div>

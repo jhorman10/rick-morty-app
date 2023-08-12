@@ -1,0 +1,48 @@
+.character-detail
+  display: grid
+  place-content: center
+  padding: 20px
+  height: 707px
+
+  .character-image
+    max-width: 100%
+    height: auto
+
+  .character-details
+    display: flex
+    align-items: center
+    margin-top: 10px
+
+    h2
+      margin-right: 10px
+
+    .status
+      font-weight: bold
+
+  .circle
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    margin-right: 10px
+
+  .alive
+    text-shadow: 1px 5px 6px rgb(27, 255, 2)
+
+  .dead
+    text-shadow: 1px 5px 6px rgb(255, 0, 0)
+
+  .unknown
+    text-shadow: 1px 5px 6px rgb(112, 112, 112)
+
+  button
+    margin-top: 20px
+    padding: 10px 20px
+    background-color: rgb(245, 245, 245)
+    color: #000
+    border: none
+    border-radius: 5px
+    cursor: pointer
+    transition: background-color 0.3s
+
+    &:hover
+      background-color: rgb(198, 198, 198)

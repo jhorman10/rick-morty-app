@@ -10,6 +10,9 @@ import { CharactersComponent } from './pages/characters/characters.component';
 import { EpisodesComponent } from './pages/episodes/episodes.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LocationsComponent } from './pages/locations/locations.component';
+import { CharacterDetailComponent } from './pages/character-detail/character-detail.component';
+import { EpisodesDetailComponent } from './pages/episodes-detail/episodes-detail.component';
+import { LocationDetailComponent } from './pages/location-detail/location-detail.component';
 
 
 @NgModule({
@@ -21,6 +24,9 @@ import { LocationsComponent } from './pages/locations/locations.component';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
+    CharacterDetailComponent,
+    EpisodesDetailComponent,
+    LocationDetailComponent,
 
   ],
   imports: [
