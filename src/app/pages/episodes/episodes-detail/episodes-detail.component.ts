@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Result } from 'src/app/interfaces/episodes.interface';
-import { EpisodesServiceService } from '../episodes/episodes.service';
+import { EpisodesServiceService } from '../episodes.service';
 
 @Component({
   selector: 'app-episodes-detail',

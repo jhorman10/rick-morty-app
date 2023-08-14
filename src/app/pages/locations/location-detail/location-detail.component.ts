@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Result } from 'src/app/interfaces/location.interface';
-import { LocationsService } from '../locations/locations.service';
+import { LocationsService } from '../locations.service';
 
 @Component({
   selector: 'app-location-detail',

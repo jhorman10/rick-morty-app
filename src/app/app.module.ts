@@ -6,13 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CharacterDetailComponent } from './pages/characters/character-detail/character-detail.component';
 import { CharactersComponent } from './pages/characters/characters.component';
+import { EpisodesDetailComponent } from './pages/episodes/episodes-detail/episodes-detail.component';
 import { EpisodesComponent } from './pages/episodes/episodes.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LocationDetailComponent } from './pages/locations/location-detail/location-detail.component';
 import { LocationsComponent } from './pages/locations/locations.component';
-import { CharacterDetailComponent } from './pages/character-detail/character-detail.component';
-import { EpisodesDetailComponent } from './pages/episodes-detail/episodes-detail.component';
-import { LocationDetailComponent } from './pages/location-detail/location-detail.component';
 
 
 @NgModule({

@@ -1,6 +1,6 @@
 <div class="characters-container">
 
-  <input type="text" class="search-input" placeholder="Buscar Personaje" (input)="filterCharacters($event)">
+  <input type="text" class="search-input" placeholder="Search character" (input)="filterCharacters($event)">
   <div class="character-list">
     <div *ngFor="let character of characters" class="character" (click)="navigateToDetail(character.id)">
       <img [src]="character.image" alt="{{ character.name }}" class="character-image">
